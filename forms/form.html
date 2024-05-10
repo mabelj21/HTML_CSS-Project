@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+    <h2>HTML Form Validation</h2>
+    <div class="avatar">
+        <img id="avatar-preview" src=https://i.imgur.com/iAXu48P.jpeg alt="Passport Photograph"> 
+        <label for="photo" class="change-photo-label">Insert Photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*" style="display: none;"> 
+    </div>
+    <form action="" class="form-container">
+
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname" maxlength="12" minlength="3" required>
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname" maxlength="12" minlength="3" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Please enter a valid password">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        </div>
+        <div class="form-group">
+            <label for="pnumber">Id Number</label>
+            <input type="number" id="pnumber" name="pnumber" max="10000" min="2" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="DOB" id="DOB" max="2023-12-31" min="1900-01-01" required>
+        </div>
+        <div class="form-group">
+            <label for="course">Choose a course:</label>
+            <select id="course" name="course">
+                <option value="data analysis">Data Analysis</option>
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="ui/ux">UI/UX</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="laptop" name="laptop" value="laptop">
+            <label for="laptop">I have a laptop</label><br>
+            <input type="checkbox" id="internet" name="internet" value="internet">
+            <label for="internet">I have a strong internet</label><br>
+            <input type="checkbox" id="electricity" name="electricity" value="electricity">
+            <label for="electricity">I have constant electricity</label>
+        </div>
+        <div class="form-group">
+            <label for="time">Upload a document</label>
+            <input type="file" name="time" id="time">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+    
+</body>
+</html>
